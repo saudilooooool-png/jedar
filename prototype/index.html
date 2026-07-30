@@ -416,6 +416,18 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="tool card" onclick="toast('حاسبة الكميات — قريبًا')"><b>حاسبة الكميات</b><span>مواسير وكوابل التمديدات تقريبيًا</span></button>
       <button class="tool card" onclick="toast('قائمة الفحص — قريبًا')"><b>قبل ما تبدأ</b><span>7 نقاط افحصها قبل التمديدات</span></button>
     </div>
+    <div class="sechead"><h2>عروض هذا الأسبوع في حيّك</h2><button class="more" onclick="toast('كل عروض الحي — قريبًا')">الكل</button></div>
+    <article class="pcard card">
+      <div class="top">
+        <div class="avatar">أم</div>
+        <div class="who">
+          <b>عرض التمديدات الكاملة — خصم المرحلة</b>
+          <div class="recs" style="color:var(--muted);font-weight:400">مؤسسة أبو محمد · فيلا دورين بسعر ثابت 26,900 ريال · حتى نهاية الأسبوع</div>
+        </div>
+      </div>
+      <div class="badges"><span class="badge v"><svg class="i sm"><use href="#i-check"/></svg> موثّق</span><span class="badge">عرض واحد نشط لكل مزوّد</span></div>
+      <div class="acts"><button class="btn btn-navy btn-sm" onclick="go('s-chat')">استفسر عن العرض</button><button class="sqbtn" aria-label="مفضلة" onclick="star(this)"><svg class="i"><use href="#i-star"/></svg></button></div>
+    </article>
     <div class="sechead"><h2 data-t="prices">أسعار المواد بالرياض</h2><button class="more" onclick="toast('المؤشر الكامل — قريبًا')">الكل</button></div>
     <div class="pricecard card">
       <table>
@@ -430,6 +442,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
   <section class="screen" id="s-browse">
     <h1 class="title" data-t="stageC">مقاولو مرحلتك: التمديدات</h1>
     <p class="sub">الأقرب لك في حي النرجس — 28 مزوّد</p>
+    <div class="field" style="margin-bottom:10px"><input placeholder="ابحث: سباك، اسم مؤسسة، حي…" onfocus="toast('البحث الحر — في النسخة الكاملة')"></div>
     <div class="filters">
       <button class="fchip sel" onclick="fchip(this)">الكل</button>
       <button class="fchip" onclick="fchip(this)">سباكة</button>
@@ -665,6 +678,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="sqbtn" aria-label="تقرير" onclick="openReport()"><svg class="i"><use href="#i-flag"/></svg></button>
     </div>
     <div class="trnote"><svg class="i sm"><use href="#i-chat"/></svg> الترجمة تلقائية — هو يكتب أردو وأنت تقرأ عربي</div>
+    <div class="warn" style="margin-top:0"><svg class="i sm"><use href="#i-shield"/></svg><span><b>تنبيه أمان:</b> لا تحوّل أي مبلغ قبل المعاينة والاتفاق — الدفع المسبق قبل بدء العمل خارج مسؤولية المنصة.</span></div>
 
     <div class="msg out"><div class="bubble">السلام عليكم، أبي تسعيرة تمديدات كهرباء كاملة لفيلا دورين 400م².</div></div>
     <div class="msg in">
@@ -805,6 +819,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="btn btn-ghost btn-sm" onclick="toast('نُشر طلب عقد بالباطن')">عقد بالباطن</button>
       <button class="btn btn-ghost btn-sm" onclick="toast('نُشر طلب عمالة يومية')">عمالة يومية</button>
     </div>
+    <button class="btn btn-ghost" style="margin-bottom:10px" onclick="toast('انشر عرض خدمة بسعر خاص — عرض واحد نشط لكل تخصص، يظهر في «عروض الحي» عند الملاك')">انشر عرض خدمة (عرض واحد نشط)</button>
     <button class="btn btn-ghost" onclick="toast('طلب انضمام للكونسيرج — فيه التزام وتعهد مستوى خدمة')">الانضمام لفريق الكونسيرج</button>
     <div style="height:10px"></div>
     <button class="btn btn-ghost" onclick="toast('ملصقك الشخصي جاهز — QR يفتح ملفك مباشرة، اطبعه بدل الملصق الورقي')">ملصقي الشخصي (QR يفتح ملفي)</button>
