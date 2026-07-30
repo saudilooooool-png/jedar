@@ -436,6 +436,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="fchip" onclick="fchip(this)">كهرباء</button>
       <button class="fchip" onclick="fchip(this)">تكييف</button>
       <button class="fchip" onclick="fchip(this)">موردون</button>
+      <button class="fchip" onclick="fchip(this)">عضو الهيئة فقط</button>
     </div>
 
     <article class="pcard card">
@@ -518,6 +519,8 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <div><b>96%</b><span>التزام بالمواعيد</span></div>
     </div>
     <div class="badges">
+      <span class="badge v"><svg class="i sm"><use href="#i-check"/></svg> عضو هيئة المقاولين — 20012345</span>
+      <span class="badge">منشأة صغيرة</span>
       <span class="badge">نطاق العمل: النرجس، الياسمين، العارض — الرياض</span>
       <span class="badge hrs">يرد من 8ص–6م</span>
     </div>
@@ -561,6 +564,12 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <div class="field"><label>نوع المشروع</label>
         <div class="segrow"><button class="seg sel" onclick="seg(this)">فيلا</button><button class="seg" onclick="seg(this)">عمارة</button><button class="seg" onclick="seg(this)">استراحة</button></div>
       </div>
+      <div class="field"><label>نطاق التنفيذ</label>
+        <div class="segrow" id="f-scope"><button class="seg sel" onclick="seg(this)">هذه المرحلة فقط</button><button class="seg" onclick="seg(this)">عظم</button><button class="seg" onclick="seg(this)">تسليم مفتاح</button></div>
+      </div>
+      <div class="field"><label>الاشتراطات</label>
+        <div class="segrow"><button class="seg sel" onclick="this.classList.toggle('sel')">مخططات معتمدة</button><button class="seg sel" onclick="this.classList.toggle('sel')">كود البناء السعودي</button></div>
+      </div>
       <div class="row">
         <div class="field" style="flex:1"><label>عدد الأدوار</label><input value="2" inputmode="numeric" id="f-floors"></div>
         <div class="field" style="flex:1"><label>ميزانية المرحلة <i>(ريال)</i></label><input value="60,000 – 80,000" id="f-budget"></div>
@@ -573,6 +582,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
         <b style="color:var(--accent);font-size:13px">معاينة — هكذا تظهر فرصتك للمقاولين</b>
         <dl style="margin-top:8px">
           <dt>المرحلة</dt><dd>التمديدات</dd>
+          <dt>نطاق التنفيذ</dt><dd id="p-scope"></dd>
           <dt>الحي</dt><dd id="p-hood"></dd>
           <dt>النوع</dt><dd id="p-type"></dd>
           <dt>مساحة الأرض</dt><dd id="p-land"></dd>
@@ -619,6 +629,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <div class="row">
         <button class="btn btn-navy btn-sm" onclick="go('s-chat')" data-t="msg">راسله</button>
         <button class="btn btn-ghost btn-sm" onclick="go('s-chat')" data-t="appt">موعد</button>
+        <button class="btn btn-ghost btn-sm" onclick="toast('أُنشئ عقد المرحلة الموحد من بيانات العرض — PDF جاهز للتوقيع')">عقد موحد</button>
         <button class="btn btn-ghost btn-sm" onclick="toast('استُبعد العرض')" data-t="excl">استبعد</button>
       </div>
     </article>
@@ -795,6 +806,8 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="btn btn-ghost btn-sm" onclick="toast('نُشر طلب عمالة يومية')">عمالة يومية</button>
     </div>
     <button class="btn btn-ghost" onclick="toast('طلب انضمام للكونسيرج — فيه التزام وتعهد مستوى خدمة')">الانضمام لفريق الكونسيرج</button>
+    <div style="height:10px"></div>
+    <button class="btn btn-ghost" onclick="toast('ملصقك الشخصي جاهز — QR يفتح ملفك مباشرة، اطبعه بدل الملصق الورقي')">ملصقي الشخصي (QR يفتح ملفي)</button>
   </section>
 
   <!-- تسجيل مزود -->
@@ -812,7 +825,8 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
     <button class="upl" onclick="this.classList.add('ok');this.innerHTML='<svg class=\'i sm\'><use href=\'#i-check\'/></svg> هوية المالك — مرفقة'"><svg class="i sm"><use href="#i-doc"/></svg> هوية المالك</button>
     <button class="upl" onclick="this.classList.add('ok');this.innerHTML='<svg class=\'i sm\'><use href=\'#i-check\'/></svg> الصورة الشخصية — مرفقة'"><svg class="i sm"><use href="#i-user"/></svg> صورة عرض شخصية</button>
 
-    <div class="field" style="margin-top:6px"><label>نبذة عن المؤسسة أو المقاول</label><textarea placeholder="خبرتنا، تخصصنا، وما يميزنا…"></textarea></div>
+    <div class="field" style="margin-top:6px"><label>رقم عضوية هيئة المقاولين <i>(اختياري — يمنح شارة «عضو الهيئة» بعد التحقق من muqawil.org)</i></label><input placeholder="مثال: 20012345" inputmode="numeric"></div>
+    <div class="field"><label>نبذة عن المؤسسة أو المقاول</label><textarea placeholder="خبرتنا، تخصصنا، وما يميزنا…"></textarea></div>
     <div class="field"><label>نطاق العمل — المدينة والأحياء</label><input value="الرياض — النرجس، الياسمين، العارض"></div>
     <div class="field"><label>سنوات الخبرة</label><input value="12" inputmode="numeric"></div>
 
@@ -990,8 +1004,10 @@ function previewPost(){
   document.getElementById('p-built').textContent=(document.getElementById('f-built').value||'—')+' م²';
   document.getElementById('p-floors').textContent=document.getElementById('f-floors').value||'—';
   document.getElementById('p-budget').textContent=(document.getElementById('f-budget').value||'غير محددة')+' ريال';
-  var t=document.querySelector('#postform .seg.sel');
+  var t=document.querySelector('#postform .field:nth-of-type(3) .seg.sel');
   document.getElementById('p-type').textContent=t?t.textContent:'—';
+  var sc=document.querySelector('#f-scope .seg.sel');
+  document.getElementById('p-scope').textContent=sc?sc.textContent:'هذه المرحلة فقط';
   document.getElementById('p-note').textContent=document.getElementById('f-note').value;
   document.getElementById('postform').style.display='none';
   document.getElementById('postpreview').style.display='block';
