@@ -735,6 +735,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
     <div class="card" style="margin-bottom:14px">
       <button class="acctrow" onclick="go('s-concierge')"><svg class="i"><use href="#i-star"/></svg><span class="lbl">خدمة الكونسيرج — منسق يشرف على بناءك</span><span class="chev">‹</span></button>
       <button class="acctrow" onclick="toast('طلب حارس مبنى — نرسل لك المتاحين في حيّك')"><svg class="i"><use href="#i-shield"/></svg><span class="lbl">توفير حارس للمبنى</span><span class="chev">‹</span></button>
+      <button class="acctrow" onclick="toast('تمويل بنائك — بالشراكة مع جهات تمويل مرخصة (قريبًا)')"><svg class="i"><use href="#i-doc"/></svg><span class="lbl">تمويل مشروعك</span><span class="chev">‹</span></button>
       <button class="acctrow" onclick="toggleRole()"><svg class="i"><use href="#i-home"/></svg><span class="lbl" id="rolelabel">التبديل إلى وضع المقاول</span><span class="chev">‹</span></button>
     </div>
 
@@ -820,6 +821,12 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="btn btn-ghost btn-sm" onclick="toast('نُشر طلب عمالة يومية')">عمالة يومية</button>
     </div>
     <button class="btn btn-ghost" style="margin-bottom:10px" onclick="toast('انشر عرض خدمة بسعر خاص — عرض واحد نشط لكل تخصص، يظهر في «عروض الحي» عند الملاك')">انشر عرض خدمة (عرض واحد نشط)</button>
+    <div class="sechead"><h2>أدوات منشأتك</h2></div>
+    <div class="row" style="margin-bottom:13px">
+      <button class="btn btn-ghost btn-sm" onclick="toast('إصدار عرض سعر باسم منشأتك — قريبًا')">عرض سعر</button>
+      <button class="btn btn-ghost btn-sm" onclick="toast('إصدار فاتورة باسم منشأتك — قريبًا')">فاتورة</button>
+      <button class="btn btn-ghost btn-sm" onclick="toast('عقد المرحلة الموحد — من بيانات عرضك')">عقد</button>
+    </div>
     <button class="btn btn-ghost" onclick="toast('طلب انضمام للكونسيرج — فيه التزام وتعهد مستوى خدمة')">الانضمام لفريق الكونسيرج</button>
     <div style="height:10px"></div>
     <button class="btn btn-ghost" onclick="toast('ملصقك الشخصي جاهز — QR يفتح ملفك مباشرة، اطبعه بدل الملصق الورقي')">ملصقي الشخصي (QR يفتح ملفي)</button>
