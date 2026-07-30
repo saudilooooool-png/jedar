@@ -36,9 +36,10 @@
 
 ## التجربة الحية
 
-- **النموذج الأولي (PWA):** https://saudilooooool-png.github.io/jedar/
+- **صفحة الهبوط:** https://saudilooooool-png.github.io/jedar/
+- **التطبيق (PWA):** https://saudilooooool-png.github.io/jedar/app/
 - **لوحة التحكم (نموذج):** https://saudilooooool-png.github.io/jedar/admin/
-- **ملصق QR للطباعة:** `prototype/qr/poster.html`
+- **ملصق QR للطباعة:** https://saudilooooool-png.github.io/jedar/qr/poster.html
 
 ## الحالة
 
