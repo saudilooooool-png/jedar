@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جدار — ملصق QR للطباعة</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4;margin:0}
+body{font-family:'Tajawal','Segoe UI',system-ui,sans-serif;background:#E9E9E4;display:flex;justify-content:center;padding:20px}
+.poster{width:210mm;min-height:297mm;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+@media print{body{background:#fff;padding:0}.hint{display:none}}
+.top{background:#24344D;color:#fff;padding:18mm 16mm 14mm;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;inset:0;opacity:.08;background:repeating-linear-gradient(0deg,transparent 0 12mm,#fff 12mm calc(12mm + 1px)),repeating-linear-gradient(90deg,transparent 0 24mm,#fff 24mm calc(24mm + 1px))}
+.brand{display:flex;align-items:center;gap:6mm;position:relative}
+.brand svg{width:16mm;height:16mm}
+.brand b{font-size:15mm;font-weight:700}
+.top h1{font-size:11mm;font-weight:700;line-height:1.5;margin-top:8mm;position:relative}
+.top p{font-size:5.6mm;color:#CDD5E2;margin-top:3mm;position:relative}
+.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12mm 16mm;text-align:center}
+.qr{width:95mm;height:95mm;border:2.5mm solid #24344D;border-radius:8mm;padding:5mm;background:#fff}
+.qr img{width:100%;height:100%;display:block}
+.scan{font-size:8.5mm;font-weight:700;color:#24344D;margin-top:8mm}
+.url{font-size:4.6mm;color:#727A89;margin-top:2mm;direction:ltr}
+.steps{display:flex;gap:6mm;margin-top:10mm;width:100%;justify-content:center}
+.step{flex:1;max-width:52mm;background:#F4F4EF;border-radius:4mm;padding:5mm 4mm;font-size:4.2mm;color:#26313F;line-height:1.6}
+.step b{display:block;color:#A9701F;font-size:5.5mm}
+.bot{background:#F4F4EF;border-top:1px solid #E5E5DF;padding:7mm 16mm;display:flex;align-items:center;justify-content:space-between;font-size:4mm;color:#727A89}
+.hint{max-width:210mm;margin:12px auto 0;color:#555;font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="top">
+    <div class="brand">
+      <svg viewBox="0 0 26 26" fill="none"><rect x="1" y="4" width="11" height="8" rx="1.5" fill="#A9701F"/><rect x="14" y="4" width="11" height="8" rx="1.5" fill="#fff" opacity=".9"/><rect x="7" y="14" width="11" height="8" rx="1.5" fill="#fff" opacity=".9"/></svg>
+      <b>جدار</b>
+    </div>
+    <h1>تبني أو ترمّم؟<br>عروض مقاولي مرحلتك توصلك — بدون ملصقات</h1>
+    <p>مقاولون وفنيون وموردون موثّقون في حيّك، مرتّبون حسب مرحلة بنائك</p>
+  </div>
+  <div class="mid">
+    <div class="qr"><img src="data:image/png;base64,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" alt="QR — jedar"></div>
+    <div class="scan">صوّر الرمز بكاميرا جوالك</div>
+    <div class="url">saudilooooool-png.github.io/jedar</div>
+    <div class="steps">
+      <div class="step"><b>١</b>صوّر الرمز وافتح الرابط</div>
+      <div class="step"><b>٢</b>سجّل مشروعك وحدد مرحلتك</div>
+      <div class="step"><b>٣</b>استقبل العروض ووصّي على الأفضل</div>
+    </div>
+  </div>
+  <div class="bot">
+    <span>للمقاولين والفنيين: سجّلوا من نفس الرابط — التسجيل بموافقة</span>
+    <span>جدار — الجدار الرقمي لمشاريع البناء</span>
+  </div>
+</div>
+<p class="hint">للطباعة: Ctrl+P واختر A4 بدون هوامش</p>
+</body>
+</html>
