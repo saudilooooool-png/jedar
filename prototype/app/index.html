@@ -736,6 +736,7 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       <button class="acctrow" onclick="go('s-concierge')"><svg class="i"><use href="#i-star"/></svg><span class="lbl">خدمة الكونسيرج — منسق يشرف على بناءك</span><span class="chev">‹</span></button>
       <button class="acctrow" onclick="toast('طلب حارس مبنى — نرسل لك المتاحين في حيّك')"><svg class="i"><use href="#i-shield"/></svg><span class="lbl">توفير حارس للمبنى</span><span class="chev">‹</span></button>
       <button class="acctrow" onclick="toast('تمويل بنائك — بالشراكة مع جهات تمويل مرخصة (قريبًا)')"><svg class="i"><use href="#i-doc"/></svg><span class="lbl">تمويل مشروعك</span><span class="chev">‹</span></button>
+      <button class="acctrow" onclick="toast('جدار أعمال: منافسات بمظاريف مغلقة وتعميد وأوامر شراء للمنشآت — سجّل اهتمامك وبنتواصل معك')"><svg class="i"><use href="#i-horn"/></svg><span class="lbl">جدار أعمال — منافسات المنشآت <span style="font-size:12px;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:1px 7px">قريبًا</span></span><span class="chev">‹</span></button>
       <button class="acctrow" onclick="toggleRole()"><svg class="i"><use href="#i-home"/></svg><span class="lbl" id="rolelabel">التبديل إلى وضع المقاول</span><span class="chev">‹</span></button>
     </div>
 
@@ -804,6 +805,22 @@ p.sub{color:var(--muted);font-size:15px;margin-bottom:18px}
       </dl>
       <div class="row">
         <button class="btn btn-navy btn-sm" onclick="openOffer()" data-t="submitOffer">قدّم عرضًا</button>
+        <button class="sqbtn" aria-label="حفظ" onclick="star(this)"><svg class="i"><use href="#i-star"/></svg></button>
+      </div>
+    </article>
+
+    <article class="opcard card" style="border-inline-start:4px solid var(--accent)">
+      <b style="color:var(--navy)">منافسة منشأة — تشطيب معارض تجارية (3 وحدات)</b>
+      <div class="loc"><svg class="i sm"><use href="#i-pin"/></svg> طريق الملك عبدالعزيز · شركة أملاك عقارية موثّقة</div>
+      <dl>
+        <dt>الصيغة</dt><dd>مظاريف مغلقة — لا تُفتح إلا بعد الإغلاق</dd>
+        <dt>موعد الإغلاق</dt><dd>باقي 3 أيام</dd>
+        <dt>المرفقات</dt><dd>مخططات + جدول كميات</dd>
+        <dt>الترسية</dt><dd>بمحضر مقارنة وخطاب تعميد</dd>
+      </dl>
+      <div class="row">
+        <button class="btn btn-navy btn-sm" onclick="openOffer()">قدّم عطاءك</button>
+        <button class="btn btn-ghost btn-sm" onclick="toast('الأسئلة والأجوبة علنية — يشوفها كل المتنافسين')">اسأل عن المنافسة</button>
         <button class="sqbtn" aria-label="حفظ" onclick="star(this)"><svg class="i"><use href="#i-star"/></svg></button>
       </div>
     </article>

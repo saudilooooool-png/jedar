@@ -1,5 +1,5 @@
 /* جدار — عامل خدمة بسيط: يخزّن الصفحة للعمل بدون إنترنت */
-var CACHE = 'jedar-proto-v5';
+var CACHE = 'jedar-proto-v6';
 var ASSETS = ['.', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', function (e) {
